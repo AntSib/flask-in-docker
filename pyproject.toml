@@ -1,0 +1,9 @@
+[project]
+name = "PIT tiny docker project"
+version = "0.1.0"
+description = "This project was made for practical information technologies course."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "flask>=3.1.3",
+]

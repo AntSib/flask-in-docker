@@ -1,0 +1,16 @@
+services:
+  flask-alpha:
+    build: ./app
+    ports:
+      - "5000:5000"
+    environment:
+      APP_ANSWER: ${APP_ANSWER:-Flask is cool.}
+    restart: unless-stopped
+
+  flask-beta:
+    build: ./app
+    ports:
+      - "5001:5000"
+    environment:
+      APP_ANSWER: ${APP_ANSWER:-No! Flask is AMAZING!}
+    restart: unless-stopped
