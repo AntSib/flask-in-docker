@@ -1,16 +1,19 @@
 services:
-  flask-alpha:
-    build: ./app
+  flask-alpha:                                    # имя сервиса
+    build: ./app                                  # путь к Dockerfile
     ports:
-      - "5000:5000"
-    environment:
+      - "5000:5000"                               # порт контейнера
+    environment:                                  # переменные окружения:
       APP_ANSWER: ${APP_ANSWER:-Flask is cool.}
+                                                  # ответа приложения
+      PORT: 5000                                  # порта приложения
     restart: unless-stopped
 
-  flask-beta:
-    build: ./app
+  flask-beta:                                     # имя второго сервиса
+    build: ./app                                  # и далее по аналогии
     ports:
-      - "5001:5000"
+      - "5001:5001"
     environment:
       APP_ANSWER: ${APP_ANSWER:-No! Flask is AMAZING!}
+      PORT: 5001
     restart: unless-stopped
