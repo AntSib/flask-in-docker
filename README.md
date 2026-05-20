@@ -47,8 +47,7 @@ services:
     ports:
       - "5000:5000"                               # порт контейнера
     environment:                                  # переменные окружения:
-      APP_ANSWER: ${APP_ANSWER:-Flask is cool.}
-                                                  # ответа приложения
+      APP_ANSWER: ${APP_ANSWER:-Flask is cool.}   # ответа приложения
       PORT: 5000                                  # порта приложения
     restart: unless-stopped
 
